@@ -1,0 +1,138 @@
+#mobile-nav {
+    width: 100%;
+    background: #000;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+
+    #banner {
+        background: $dark-red;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+
+
+        a {
+            text-decoration: none;
+            padding: .5rem;
+            color: $light-color;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+
+            i {
+                margin-right: .3rem;
+            }
+        }
+
+        p {
+            font-size: 1rem;
+            padding: .5rem;
+            color: $light-color;
+        }
+    }
+
+    #logo {
+        padding-left: 1rem;
+        display: block;
+
+        img {
+            width: 150px;
+        }
+    }
+
+
+    #menu-links {
+
+        height: 0px;
+        transition: height .5s ease-in-out;
+
+        #menu-social {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            opacity: 0;
+            transition: all 1s ease-in-out;
+
+            a {
+                padding: 1rem;
+                display: block;
+            }
+
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            color: $light-color;
+            font-size: 1.2rem;
+            text-decoration: none;
+
+        }
+    }
+
+    .menu-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 80px;
+        height: 80px;
+        cursor: pointer;
+        transition: all .5s ease-in-out;
+        margin: 4.5rem 1rem;
+
+        .burger {
+            width: 50px;
+            height: 6px;
+            border-radius: 5px;
+            background: $secondary-color;
+            transition: all .5s ease-in-out;
+            box-shadow: 0 2px 5px rgba(255, 255, 255, .5);
+
+        }
+    }
+
+    .burger:after,
+    .burger:before {
+        content: "";
+        position: absolute;
+        width: 50px;
+        height: 6px;
+        background: $light-color;
+        border-radius: 5px;
+        transition: all .5s ease-in-out;
+        box-shadow: 0 2px 5px rgba(255, 255, 255, .5);
+
+    }
+
+    .burger:before {
+        transform: translateY(-16px);
+    }
+
+    .burger:after {
+        transform: translateY(16px);
+    }
+
+    .open .burger {
+        transform: translateX(-50px);
+        background: transparent;
+        box-shadow: none;
+
+    }
+
+    .open .burger:before {
+        transform: rotate(45deg) translate(35px, -35px);
+    }
+
+    .open .burger:after {
+        transform: rotate(-45deg) translate(35px, 35px);
+    }
+
+
+}

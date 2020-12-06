@@ -1,0 +1,18 @@
+// colors 
+$primary-color: #2b2024;
+$secondary-color: #fd0054;
+$light-color: #fbf9fa;
+$dark-red: #a80038;
+$alt-light-color: #e1f4f3;
+
+
+// resets
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
